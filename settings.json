@@ -1,0 +1,11 @@
+{
+    "workbench.colorTheme": "Default High Contrast",
+    "explorer.confirmDelete": false,
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "*.HTML": "default",
+        "*.py": "default"
+    },
+    "workbench.editor.enablePreview": false,
+    "git.openRepositoryInParentFolders": "always"
+}

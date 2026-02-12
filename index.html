@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Assignment Help - USD to KES Currency Conversion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">💱</span>
+                <span class="logo-text">Instant Assignment Help</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#calculator">Converter</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Convert USD to KES <span class="highlight">Instantly & Securely</span></h1>
+            <p class="hero-subtitle">Receive PayPal payments and transfer directly to your Kenyan bank account with competitive rates and fast processing</p>
+            <div class="hero-buttons">
+                <a href="#calculator" class="btn btn-primary">Start Converting</a>
+                <a href="#how-it-works" class="btn btn-secondary">Learn More</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">50K+</span>
+                    <span class="stat-label">Transactions</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">99.9%</span>
+                    <span class="stat-label">Success Rate</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Support</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <p class="section-subtitle">Trusted by thousands of clients for secure and efficient currency conversion</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure Transactions</h3>
+                    <p>Bank-level security protocols ensure your funds and personal information are always protected</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Instant Processing</h3>
+                    <p>Get your KES in your bank account within minutes of receiving USD payments</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Competitive Rates</h3>
+                    <p>Enjoy some of the best exchange rates in the market with transparent pricing</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏦</div>
+                    <h3>Direct Bank Transfers</h3>
+                    <p>Seamless transfers to all major Kenyan banks including KCB, Equity, Co-op, and more</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Easy PayPal Integration</h3>
+                    <p>Simple and quick connection to your PayPal account for hassle-free payments</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated support team is available around the clock to assist you</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="calculator">
+        <div class="container">
+            <h2 class="section-title">Currency Converter</h2>
+            <p class="section-subtitle">Calculate your estimated KES amount from USD</p>
+            <div class="calculator-card">
+                <div class="converter-form">
+                    <div class="input-group">
+                        <label for="amount">Amount</label>
+                        <div class="input-wrapper">
+                            <span class="currency-symbol">$</span>
+                            <input type="number" id="amount" placeholder="Enter amount" min="1" step="0.01">
+                        </div>
+                    </div>
+                    <div class="conversion-row">
+                        <div class="input-group">
+                            <label for="from-currency">From</label>
+                            <select id="from-currency">
+                                <option value="USD" selected>USD - US Dollar</option>
+                            </select>
+                        </div>
+                        <button class="swap-btn" id="swap-currencies">⇄</button>
+                        <div class="input-group">
+                            <label for="to-currency">To</label>
+                            <select id="to-currency">
+                                <option value="KES" selected>KES - Kenyan Shilling</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="exchange-rate">
+                        <span>Current Exchange Rate:</span>
+                        <span id="exchange-rate-display">1 USD = 128.50 KES</span>
+                    </div>
+                    <button class="btn btn-primary btn-full" id="calculate-btn">Calculate</button>
+                    <div class="result" id="result-container">
+                        <div class="result-amount">
+                            <span class="result-label">You will receive approximately:</span>
+                            <span class="result-value" id="result-value">0.00 KES</span>
+                        </div>
+                        <div class="result-details">
+                            <span id="conversion-fee">Fee: 0.00 KES</span>
+                            <span id="processing-time">Processing: ~15 minutes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator-info">
+                    <h3>Conversion Summary</h3>
+                    <ul class="info-list">
+                        <li>Exchange Rate: <strong>1 USD = 128.50 KES</strong></li>
+                        <li>Processing Fee: <strong>2%</strong></li>
+                        <li>Bank Transfer Fee: <strong>Free</strong></li>
+                        <li>Estimated Time: <strong>5-15 minutes</strong></li>
+                    </ul>
+                    <div class="info-note">
+                        <span class="note-icon">ℹ️</span>
+                        <p>Final amount may vary slightly based on real-time exchange rates at processing time</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Get your KES in 3 simple steps</p>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Send Your USD</h3>
+                        <p>Receive payment in your PayPal account and initiate a transfer to our secure PayPal business account</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>We Convert & Process</h3>
+                        <p>We convert your USD to KES at competitive rates and process the transfer to your Kenyan bank account</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Receive KES</h3>
+                        <p>Get credited directly to your Kenyan bank account within minutes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-box">
+                <h3>Ready to Get Started?</h3>
+                <p>Contact us now to set up your account and start converting</p>
+                <a href="#contact" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supported Banks Section -->
+    <section class="supported-banks">
+        <div class="container">
+            <h2 class="section-title">Supported Kenyan Banks</h2>
+            <p class="section-subtitle">Direct transfers to all major banks in Kenya</p>
+            <div class="banks-grid">
+                <div class="bank-item">KCB</div>
+                <div class="bank-item">Equity Bank</div>
+                <div class="bank-item">Co-operative Bank</div>
+                <div class="bank-item">Absa Kenya</div>
+                <div class="bank-item">Standard Chartered</div>
+                <div class="bank-item">Family Bank</div>
+                <div class="bank-item">I&M Bank</div>
+                <div class="bank-item">HFC Bank</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Have questions? We're here to help</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@instantassignmenthelp.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+254 700 000 000</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Nairobi, Kenya</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🕐</span>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>24/7 - Always Available</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="general">General Inquiry</option>
+                            <option value="conversion">Currency Conversion</option>
+                            <option value="support">Support</option>
+                            <option value="partnership">Partnership</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">💱</span>
+                        <span class="logo-text">Instant Assignment Help</span>
+                    </div>
+                    <p>Your trusted partner for USD to KES currency conversion. Secure, fast, and reliable.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#calculator">Converter</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">PayPal to KES</a></li>
+                        <li><a href="#">Bank Transfers</a></li>
+                        <li><a href="#">Business Solutions</a></li>
+                        <li><a href="#">API Integration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Instant Assignment Help. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
